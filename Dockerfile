@@ -1,12 +1,7 @@
-FROM ubuntu:16.04
+FROM python:3.8
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-         build-essential \
-         git \
-         curl \
-         ca-certificates \
-         libjpeg-dev \
-         libpng-dev && \
+         vim \
      rm -rf /var/lib/apt/lists/*
 
 WORKDIR /workspace
