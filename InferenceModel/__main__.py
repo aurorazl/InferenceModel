@@ -1,7 +1,7 @@
 import kfserving
 import argparse
 
-from InferenceModel import InferenceModel
+from InferenceModel import InferenceModelClass
 
 DEFAULT_MODEL_NAME = "model"
 DEFAULT_LOCAL_MODEL_DIR = "/tmp/model"
@@ -17,6 +17,6 @@ parser.add_argument('--model_class_name', default=DEFAULT_MODEL_CLASS_NAME,
 args, _ = parser.parse_known_args()
 
 if __name__ == "__main__":
-    model = InferenceModel(args.model_name, args.model_class_name, args.model_dir)
+    model = InferenceModelClass(args.model_name, args.model_class_name, args.model_dir)
     model.load()
     kfserving.KFServer().start([model])

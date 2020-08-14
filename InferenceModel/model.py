@@ -4,7 +4,7 @@ import pickle
 
 MODEL_FILE = "model.pkl"
 
-class InferenceModel(kfserving.KFModel):
+class InferenceModelClass(kfserving.KFModel):
     def __init__(self, name: str, model_class_name: str, model_dir: str):
         super().__init__(name)
         self.name = name
