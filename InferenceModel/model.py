@@ -1,9 +1,5 @@
 import kfserving
 import os
-from typing import Dict
-import torch
-import importlib
-import sys
 import pickle
 
 MODEL_FILE = "model.pkl"
