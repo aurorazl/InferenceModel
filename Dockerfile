@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /workspace
 RUN chmod -R a+w /workspace
+RUN pip install --upgrade pip && pip install kfserving
 
 COPY . .
-RUN pip install --upgrade pip && pip install kfserving
 ENTRYPOINT ["python", "-m", "InferenceModel"]
